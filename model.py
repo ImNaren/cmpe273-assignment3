@@ -35,8 +35,9 @@ class Expense(db.Model):
 	status=db.Column(db.String(100),unique=False)
 	decision_date=db.Column(db.String(50),unique=False)
 
-	def __init__(self, name, email, category, description, link, estimated_costs, submit_date):
+	def __init__(self, id, name, email, category, description, link, estimated_costs, submit_date):
 		# initialize columns
+		self.id = id
 		self.name = name
 		self.email = email
 		self.category = category
